@@ -1,0 +1,10 @@
+new wagon aa numseats 20
+new wagon ss numseats 50
+new train aa
+add aa to aa
+add aa to aa
+add ss to aa
+add ss to aa
+new train train2
+add aa to train2
+add ss to train2
