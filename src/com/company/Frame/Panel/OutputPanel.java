@@ -12,12 +12,12 @@ import java.awt.*;
  */
 public class OutputPanel extends JPanel implements Observer{
 
-    JTextArea overView;
+    private JTextArea overView;
     private JTextArea outputPanel;
 
     private JScrollPane scrollPane;
     private JScrollPane scrollPane1;
-    Controller controller;
+    private Controller controller;
 
 
     public OutputPanel(Controller controller) {
@@ -29,7 +29,7 @@ public class OutputPanel extends JPanel implements Observer{
 
         //this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 
-        overView = new JTextArea(){{setPreferredSize(new Dimension(490,190)); setBackground(Color.white);}};
+        overView = new JTextArea();
         outputPanel = new JTextArea();
         scrollPane = new JScrollPane(outputPanel){{setPreferredSize(new Dimension(490,200)); setBackground(Color.white);}};
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);

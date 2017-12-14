@@ -87,8 +87,12 @@ public class Controller{
 
     public void executeAdd(String[] command){
         if (command.length == 4){
-            facade.addWagonToTrain(command[3], command[1]);
-            output.add("wagon added to train");
+            if(trainExists(command[3]) && wagonExists(command[1])) {
+                facade.addWagonToTrain(command[3], command[1]);
+                output.add("wagon added to train");
+            }else{
+                output.add("incorrect names");
+            }
         }else{
             output.add("command not found");
         }
@@ -96,8 +100,12 @@ public class Controller{
 
     public void executeRemove(String[] command){
         if (command.length == 4){
-            facade.removeWagonFromTrain(command[3], command[1]);
-            output.add("wagon removed from train");
+            if(trainExists(command[3]) && wagonExists(command[1])) {
+                facade.removeWagonFromTrain(command[3], command[1]);
+                output.add("wagon removed from train");
+            }else{
+                output.add("incorrct names");
+            }
         }else{
             output.add("command not found");
         }

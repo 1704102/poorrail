@@ -83,9 +83,9 @@ public class TrainPanel extends JPanel implements Observer {
     @Override
     public void update() {
         if(getMaxWagon() > 8){
-            this.setPreferredSize(new Dimension(990 + 130 + (getMaxWagon() - 8) * 100, this.getHeight() + 100 * controller.getFacade().getTrains().size()));
+            this.setPreferredSize(new Dimension(990 + 130 + (getMaxWagon() - 8) * 100, 40 + 100 * controller.getFacade().getTrains().size()));
         }else{
-            this.setPreferredSize(new Dimension(this.getWidth(), this.getHeight() + 100 * controller.getFacade().getTrains().size()));
+            this.setPreferredSize(new Dimension(this.getWidth(), 40 + 100 * controller.getFacade().getTrains().size()));
         }
         revalidate();
         repaint();
